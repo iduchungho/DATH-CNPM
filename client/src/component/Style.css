@@ -1,0 +1,134 @@
+.justify-content-end {
+    justify-content: left !important;
+}
+
+.navbar-logo{
+    display: grid;
+    margin-right: auto;
+    /* padding-left: 20px; */
+    padding-right: 20px;
+    justify-content: left;
+    align-items: center;
+    font-size: 10%;
+}
+
+.navbar-logo-icon{
+    display: flex;
+    width: 2rem;
+}
+
+.navbar-logo-text{
+    /* background-color: rgb(199, 217, 237); */
+    border-radius: 1rem;
+    padding: 0px 15px 0px 15px;
+    display: flex;
+    font-size: 2rem;
+}
+
+.navbar-logo-BK{
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #030391;
+    font-weight: bold;
+    padding-right: 4px;
+}
+
+.navbar-logo-food {
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1488d8;
+    font-weight: bold;
+}
+
+.toggle-login{
+    margin-left: 10px;
+}
+
+.offcanvas{
+    width: 600px !important;
+}
+
+.button{
+    margin-left: 10px;
+    /* margin-right: 10px; */
+    display: flex;
+    border-radius: 1.3rem;
+    border: 1px solid #dee2e6;
+}
+
+.btn-icon{
+    margin-top: 4px;
+    margin-right: 5px;
+}
+
+.offcanvas-body-item-nothing{
+    display: grid;
+    justify-content: center;
+}
+.offcanvas-body-container{
+    display: grid;
+}
+.box-nothing-icon{
+    display: flex;
+    font-size: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+.message{
+    color: gainsboro;
+}
+.line{
+    margin: 3rem auto 10px auto;
+    width: 300px;
+    border: solid 0.5px #dee2e6;
+}
+
+.login-wallpaper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container{
+    margin-top: 3rem;
+    /* max-width: 600px;
+    background-color: grey;
+    display: grid;
+    border: solid 1px red; */
+}
+
+/* .login-title{
+    display: flex;
+    justify-content: center;
+}
+
+.login-form{
+    height: 15rem;
+}
+
+.login-btn{
+    display: flex;
+    justify-content: center;
+} */
+
+@media only screen and (max-width: 700px) {
+    .navbar-logo-text{
+        font-size: 1.5rem;
+    }
+    .btn-title{
+        font-size: 0;
+    }
+    .btn-icon {
+        margin-top: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .navbar-toggler{
+        border: none;
+        font-size: 1rem;
+    }
+}

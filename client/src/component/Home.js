@@ -4,7 +4,7 @@ function Home() {
     return(
         <>
             <div>
-                Homepage
+                HCMUT pages
             </div>
         </>
     )

@@ -26,6 +26,6 @@ app.use((err : ExpressError , req : Request , res : Response) => {
     const { status = StatusCodes.INTERNAL_SERVER_ERROR, message = 'Something went wrong' } = err
     res.status(status).send(message)
 })
-app.listen(3000, () => {
-    logger.info(`Server is listening on port ${3000}`)
+app.listen(PORT, () => {
+    logger.info(`Server is listening on port ${PORT}`)
 })

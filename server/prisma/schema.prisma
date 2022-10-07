@@ -1,0 +1,48 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider = "mongodb"
+    url      = "mongodb+srv://giaphong:iH8dmbRbeKnht2gs@databasedamh.acc9voi.mongodb.net/databasedamh?retryWrites=true&w=majority"
+}
+
+model User {
+    id String @id @default(auto()) @map("_id") @db.ObjectId
+    username String @unique
+    email String @unique
+    salt String
+    password String
+    cart Cart?
+}
+
+model UploadFood {
+    id String @id @default(auto()) @map("_id") @db.ObjectId
+    title String
+    price Int
+    image String
+    category String
+    avarageRating Float
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+}
+model OrderedFood {
+    id String @id @default(auto()) @map("_id") @db.ObjectId
+    title String
+    price Int
+    quantity Int @default(1)
+    description String?
+    cartId String
+    cart Cart @relation(fields: [cartId], references: [id], onDelete: Cascade)
+}
+model Cart {
+    id String @id @default(auto()) @map("_id") @db.ObjectId
+    userId String @unique
+    user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+    orderedFoods OrderedFood[]
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+}

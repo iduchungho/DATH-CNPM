@@ -6,6 +6,7 @@ import cookieParser from 'cookie-parser'
 import userRoute from './modules/user/user.route'
 import deserializeUser from './middlewares/deserializeUser'
 import dotenv from 'dotenv'
+import uploadFoodRouter from './modules/uploadFood/uploadFood.route'
 if(process.env.NODE_ENV !== 'production') {
     dotenv.config();
 }
@@ -16,6 +17,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(deserializeUser);
 app.use('/api/users', userRoute)
+app.use('/api/uploadFoods',uploadFoodRouter)
 app.get('/healthcheck',(req: Request, res: Response) => {
     res.status(StatusCodes.OK).send('ok');
 })

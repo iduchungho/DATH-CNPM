@@ -115,6 +115,19 @@
     justify-content: center;
 } */
 
+/* .form-container{
+    margin-left: 10rem;
+    margin-right: 10rem;
+} */
+
+/* .font-site{
+    width: 100rem;
+} */
+
+.card-body-container{
+    width: 16rem;
+}
+
 @media only screen and (max-width: 700px) {
     .navbar-logo-text{
         font-size: 1.5rem;

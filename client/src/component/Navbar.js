@@ -44,7 +44,7 @@ export default function NavbarTop() {
                             <Nav className="justify-content-end flex-grow-1 pe-3">
                                 <Nav.Link href="/">Trang chủ</Nav.Link>
                                 <Nav.Link href="/tutorial">Giới thiệu</Nav.Link>
-
+                                <Nav.Link href="/register">Đăng kí</Nav.Link>
                             </Nav>
                         </Offcanvas.Body>
                     </Navbar.Offcanvas>

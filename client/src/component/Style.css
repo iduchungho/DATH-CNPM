@@ -143,10 +143,14 @@
     padding: 0px 15px 0px 15px;
     display: flex;
     font-size: 1.5rem;
+    justify-content: center;
 }
 .card-body-container{
     width: 16rem;
 }
+/* .card-form-title{
+    font-size: medium;
+} */
 
 @media only screen and (max-width: 769px) {
     .navbar-logo-text{

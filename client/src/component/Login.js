@@ -45,7 +45,7 @@ export function LoginPage() {
                 <Card variant='light' style={{ width: '18rem' }}>
                     {/* <Card.Header>Đăng nhập</Card.Header> */}
                     <Card.Body>
-                        <Card.Title>
+                        <Card.Title className='card-form-title'>
                             <BKLogoComponent />
                         </Card.Title>
                         <Card.Text className='card-body-container'>Đăng nhập</Card.Text>
@@ -85,7 +85,7 @@ export function RegisterPage() {
             <div className='login-container'>
                 <Card variant='light' style={{ width: '100%' }}>
                     <Card.Body>
-                        <Card.Title>
+                        <Card.Title className='card-form-title'>
                             <BKLogoComponent />
                         </Card.Title>
                         <Form className='font-site'>
@@ -100,7 +100,7 @@ export function RegisterPage() {
                                 <Form.Label>Password</Form.Label>
                                 <Form.Control type='Password' placeholder='Enter Password' />
                             </Form.Group>
-                            <Form.Group controlId='formBasicPassword' className='mb-3'>
+                            <Form.Group controlId='formBasicConfirmPassword' className='mb-3'>
                                 <Form.Label>Confirm Password</Form.Label>
                                 <Form.Control type='Password' placeholder='Confirm Password' />
                             </Form.Group>

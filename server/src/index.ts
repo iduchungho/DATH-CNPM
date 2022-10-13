@@ -1,6 +1,7 @@
 import express, { NextFunction, Request, Response } from 'express'
 import { StatusCodes } from 'http-status-codes'
 import ExpressError from './utils/expressError'
+import cors from 'cors'
 import logger from './utils/logger'
 import cookieParser from 'cookie-parser'
 import userRoute from './modules/user/user.route'
@@ -13,6 +14,10 @@ if(process.env.NODE_ENV !== 'production') {
 const PORT = process.env.PORT || 3000
 const app = express()
 app.use(express.json());
+app.use(cors({
+    origin: process.env.CLIENT_URL,
+    credentials: true
+}))
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(deserializeUser);

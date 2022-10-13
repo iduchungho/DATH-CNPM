@@ -1,6 +1,7 @@
+import Carousel from 'react-bootstrap/Carousel';
 
 
-function Home() {
+export default function Home() {
     return(
         <>
             <div>
@@ -10,4 +11,12 @@ function Home() {
     )
 }
 
-export default Home;
+export function CarouselComponent(){
+    return(
+        <div>
+            <Carousel>
+                
+            </Carousel>
+        </div>
+    );
+}

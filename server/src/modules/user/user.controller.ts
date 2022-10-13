@@ -41,7 +41,7 @@ export const loginUserController = async (req: Request<{}, {}, loginUserInput>, 
         httpOnly: true,
         domain: 'localhost',
         path: '/',
-        sameSite: "lax",
+        sameSite: "none",
         secure: false,
     });
     res.cookie("refreshToken", refreshToken, {
@@ -49,7 +49,7 @@ export const loginUserController = async (req: Request<{}, {}, loginUserInput>, 
         httpOnly: true,
         domain: 'localhost',
         path: '/',
-        sameSite: "lax",
+        sameSite: "none",
         secure: false,
     });
     return res.status(StatusCodes.CREATED).send({ accessToken, refreshToken });

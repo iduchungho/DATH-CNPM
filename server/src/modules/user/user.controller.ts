@@ -41,7 +41,7 @@ export const loginUserController = async (req: Request<{}, {}, loginUserInput>, 
         httpOnly: true,
         domain: "damh-cnpm.herokuapp.com",
         path: '/',
-        sameSite: "none",
+        sameSite: "strict",
         secure: false,
     });
     res.cookie("refreshToken", refreshToken, {
@@ -49,7 +49,7 @@ export const loginUserController = async (req: Request<{}, {}, loginUserInput>, 
         httpOnly: true,
         domain: 'damh-cnpm.herokuapp.com',
         path: '/',
-        sameSite: "none",
+        sameSite: "strict",
         secure: false,
     });
     return res.status(StatusCodes.CREATED).send({ accessToken, refreshToken });
@@ -67,7 +67,7 @@ export const logoutHandler = async (req: Request, res: Response, next: NextFunct
     res.clearCookie('accessToken', {
         maxAge: 3.156e10,
         httpOnly: true,
-        domain: 'localhost',
+        domain: 'damh-cnpm.herokuapp.com',
         path: '/',
         sameSite: "strict",
         secure: false,
@@ -75,7 +75,7 @@ export const logoutHandler = async (req: Request, res: Response, next: NextFunct
     res.clearCookie('refreshToken', {
         maxAge: 3.156e10,
         httpOnly: true,
-        domain: 'localhost',
+        domain: 'damh-cnpm.herokuapp.com',
         path: '/',
         sameSite: "strict",
         secure: false,

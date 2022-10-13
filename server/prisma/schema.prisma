@@ -19,21 +19,27 @@ model User {
     cart Cart?
     sessions Session[]
 }
-
+model FoodImage {
+    id String @id @default(auto()) @map("_id") @db.ObjectId
+    url String
+    filename String
+    foodId String @unique
+    food UploadFood @relation(fields: [foodId], references: [id], onDelete: Cascade)
+}
 model UploadFood {
     id String @id @default(auto()) @map("_id") @db.ObjectId
     title String
-    price Int
-    image String
+    price String
     category String
-    avarageRating Float
+    averageRating String
     createdAt DateTime @default(now())
     updatedAt DateTime @updatedAt
+    foodImage FoodImage?
 }
 model OrderedFood {
     id String @id @default(auto()) @map("_id") @db.ObjectId
     title String
-    price Int
+    price String
     quantity Int @default(1)
     description String?
     cartId String

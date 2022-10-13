@@ -11,6 +11,7 @@ import React from 'react';
 import './Style.css'
 import OffcanvasCart from './Cart';
 import OffcanvasLogin from './Login';
+import { BKLogoComponent } from './Home';
 
 export default function NavbarTop() {
 
@@ -21,14 +22,10 @@ export default function NavbarTop() {
                     <Navbar.Toggle aria-controls='offcanvasNavbar-expand-sm' />
 
                     <Navbar.Brand href="/" className='navbar-logo'>
-                        <div className="navbar-logo-text">
-                            <div className='navbar-logo-BK'>
-                                BK
-                            </div>
-                            <div className='navbar-logo-food'>
-                                Food
-                            </div>
-                        </div>
+                        {/* <div className="navbar-logo-text">
+                            <BKLogoComponent/>
+                        </div> */}
+                        <BKLogoComponent />
                     </Navbar.Brand>
                     <Navbar.Offcanvas
                         id='offcanvasNavbar-expand-sm'
@@ -37,7 +34,7 @@ export default function NavbarTop() {
                     >
                         <Offcanvas.Header closeButton>
                             <Offcanvas.Title id="offcanvasNavbarLabel-expand-sm">
-                                Offcanvas
+                                <BKLogoComponent />
                             </Offcanvas.Title>
                         </Offcanvas.Header>
                         <Offcanvas.Body>

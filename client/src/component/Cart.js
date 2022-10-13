@@ -11,11 +11,13 @@ import {
 }
     from 'react-icons/bs'
 import { GiCardboardBox } from "react-icons/gi";
+// import { Link } from 'react-router-dom';
 
 export default function OffcanvasCart() {
     const [showbtn, setShowbtn] = useState(false);
     const handleShow = () => setShowbtn(true);
     const handleClose = () => setShowbtn(false);
+    
     return (
         <>
             <Button variant="light" onClick={handleShow} className='button'>
@@ -43,9 +45,9 @@ export default function OffcanvasCart() {
                         </div>
                         <div className='line'/>
                         <div className='offcanvas-body-bills'>
-                            bills here
+                            Tổng hóa đơn
                         </div>
-                        <Button variant='primary'> Tiến hành đặt hàng</Button>
+                        <Button variant='primary' href = '/pay'> Tiến hành đặt hàng</Button>
                     </div>
                 </Offcanvas.Body>
             </Offcanvas>

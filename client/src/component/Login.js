@@ -39,8 +39,7 @@ export function LoginPage(){
                     {/* <Card.Header>Đăng nhập</Card.Header> */}
                     <Card.Body>
                         <Card.Title>Đăng nhập</Card.Title>
-                        <Card.Text>Some quick example text to build on the card title and make up the
-                            bulk of the card's content</Card.Text>
+                        <Card.Text>Phần của phong</Card.Text>
                     </Card.Body>    
                 </Card>               
             </div>

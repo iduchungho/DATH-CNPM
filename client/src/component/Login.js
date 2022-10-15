@@ -15,6 +15,7 @@ import {
     //BsXLg
 }
     from 'react-icons/bs'
+import { serverURL } from '../config/config';
 
 import { BKLogoComponent } from './Home';
 

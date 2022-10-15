@@ -6,10 +6,10 @@ import { prisma } from '../../utils/prisma';
 import { uploadFood } from './uploadFood.service';
 import {cloudinaryUtils} from '../../../cloudinary';
 export const uploadFoodController = async (req: Request<{},{},UploadFoodInput>, res: Response, next : NextFunction) => {
-    const newFood = await uploadFood(req.body);
     if(!req.file) {
         return next(new ExpressError('Image is required',StatusCodes.BAD_REQUEST))
     }
+    const newFood = await uploadFood(req.body);
     const {path , filename} = req.file
     await prisma.foodImage.create({
         data : {

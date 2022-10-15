@@ -1,4 +1,4 @@
-import { NextFunction, Request, Response } from "express";
+import { CookieOptions, NextFunction, Request, Response } from "express";
 import { StatusCodes } from "http-status-codes";
 import ExpressError from "../../utils/expressError";
 import dotenv from 'dotenv'
@@ -8,6 +8,14 @@ import { signJwt } from "../../utils/jwt.utils";
 import { createSession, deleteSession } from "../session/session.service";
 import { loginUserInput, registerUserInput } from "./user.schema";
 import { findUserByEmail, registerUser } from "./user.service";
+export const cookieOptions : CookieOptions= {
+    maxAge: 3.156e10,
+    httpOnly: true,
+    domain: 'localhost', // damh-cnpm.herokuapp.com , localhost
+    path: '/',
+    sameSite: 'lax',
+    secure : false,
+}
 export const registerUserController = async (req: Request<{}, {}, registerUserInput>, res: Response, next: NextFunction) => {
     const { email, username, password } = req.body;
     const user = await registerUser({ email, username, password });
@@ -36,22 +44,8 @@ export const loginUserController = async (req: Request<{}, {}, loginUserInput>, 
         { sessionId: session.id, ...rest },
         { expiresIn: refreshTokenTtl }
     )
-    res.cookie('accessToken', accessToken, {
-        maxAge: 900000,
-        httpOnly: true,
-        domain: 'localhost',
-        path: '/',
-        sameSite: "strict",
-        secure: false,
-    });
-    res.cookie("refreshToken", refreshToken, {
-        maxAge: 3.156e10,
-        httpOnly: true,
-        domain: 'localhost',
-        path: '/',
-        sameSite: "strict",
-        secure: false,
-    });
+    res.cookie('accessToken', accessToken, cookieOptions);
+    res.cookie("refreshToken", refreshToken, cookieOptions);
     return res.status(StatusCodes.CREATED).send({ accessToken, refreshToken });
 }
 
@@ -64,22 +58,8 @@ export const logoutHandler = async (req: Request, res: Response, next: NextFunct
     const sessionId = res.locals.user.sessionId;
     res.locals.user = null;
     await deleteSession(sessionId);
-    res.clearCookie('accessToken', {
-        maxAge: 3.156e10,
-        httpOnly: true,
-        domain: 'localhost',
-        path: '/',
-        sameSite: "strict",
-        secure: false,
-    });
-    res.clearCookie('refreshToken', {
-        maxAge: 3.156e10,
-        httpOnly: true,
-        domain: 'localhost',
-        path: '/',
-        sameSite: "strict",
-        secure: false,
-    });
+    res.clearCookie('accessToken', cookieOptions);
+    res.clearCookie('refreshToken', cookieOptions);
     return res.json({
         accessToken : "",
         refreshToken : ""

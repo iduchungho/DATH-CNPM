@@ -40,7 +40,7 @@ model OrderedFood {
     id String @id @default(auto()) @map("_id") @db.ObjectId
     title String
     price String
-    quantity String @default("1")
+    quantity Int @default(1)
     description String?
     cartId String
     cart Cart @relation(fields: [cartId], references: [id], onDelete: Cascade)

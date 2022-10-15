@@ -1,6 +1,7 @@
 import { NextFunction, Request, Response } from "express";
 import _ from 'lodash'
 import { reIssueAccessToken } from "../modules/session/session.service";
+import { cookieOptions } from "../modules/user/user.controller";
 import { verifyJwt } from "../utils/jwt.utils";
 const deserializeUser = async (req: Request, res: Response, next : NextFunction) => {
     const accessToken = _.get(req.cookies, "accessToken") || _.get(req, "headers.authorization", "").replace(
@@ -20,14 +21,7 @@ const deserializeUser = async (req: Request, res: Response, next : NextFunction)
         const newAccessToken = await reIssueAccessToken(refreshToken);
         if (newAccessToken) {
             res.setHeader('x-access-token', newAccessToken);
-            res.cookie('accessToken', newAccessToken, {
-                maxAge: 900000,
-                httpOnly: true,
-                domain: 'localhost',
-                path: '/',
-                sameSite: "strict",
-                secure: false,
-            })
+            res.cookie('accessToken', newAccessToken,cookieOptions)
             const { decoded } = verifyJwt(newAccessToken as string);
             res.locals.user = decoded;
             return next();

@@ -8,12 +8,12 @@ import { signJwt } from "../../utils/jwt.utils";
 import { createSession, deleteSession } from "../session/session.service";
 import { loginUserInput, registerUserInput } from "./user.schema";
 import { findUserByEmail, registerUser } from "./user.service";
-const cookieOptions : CookieOptions= {
+export const cookieOptions : CookieOptions= {
     maxAge: 3.156e10,
     httpOnly: true,
-    domain: 'damh-cnpm.herokuapp.com',
+    domain: 'localhost', // damh-cnpm.herokuapp.com , localhost
     path: '/',
-    sameSite: 'strict',
+    sameSite: 'lax',
     secure : false,
 }
 export const registerUserController = async (req: Request<{}, {}, registerUserInput>, res: Response, next: NextFunction) => {

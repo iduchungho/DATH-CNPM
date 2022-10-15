@@ -27,8 +27,21 @@ export function BKLogoComponent() {
 export default function Home() {
     return (
         <>
-            <div>
-                HCMUT pages
+            <div className='home-wallpaper'>
+                <div className='carousel-container'>
+                    carousel-item
+                </div>
+                <div className='food-container'>
+                    <div className='left-container'>
+                        cart-item
+                    </div>
+                    <div className='food-card-container'>
+                        food
+                    </div>
+                    <div className='right-container'>
+                        dashboard-item
+                    </div>
+                </div>
             </div>
         </>
     )

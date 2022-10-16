@@ -26,6 +26,9 @@ export const findCartById = async(cartId : string) => {
     const cart = await prisma.cart.findUnique({
         where : {
             id : cartId
+        },
+        include : {
+            orderedFoods : true
         }
     })
     return cart;

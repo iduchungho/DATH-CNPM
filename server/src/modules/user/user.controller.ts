@@ -2,7 +2,9 @@ import { CookieOptions, NextFunction, Request, Response } from "express";
 import { StatusCodes } from "http-status-codes";
 import ExpressError from "../../utils/expressError";
 import dotenv from 'dotenv'
-dotenv.config();
+if(process.env.NODE_ENV !== 'production') {
+    dotenv.config();
+}
 import { verifyPassword } from "../../utils/hash";
 import { signJwt } from "../../utils/jwt.utils";
 import { createSession, deleteSession } from "../session/session.service";
@@ -17,8 +19,11 @@ export const cookieOptions : CookieOptions= {
     secure : false,
 }
 export const registerUserController = async (req: Request<{}, {}, registerUserInput>, res: Response, next: NextFunction) => {
-    const { email, username, password } = req.body;
-    const user = await registerUser({ email, username, password });
+    const { email, username, password , role} = req.body;
+    if(role !== 'user') {
+        return next(new ExpressError('Unauthorized',StatusCodes.UNAUTHORIZED))
+    }
+    const user = await registerUser({ email, username, password , role });
     res.status(StatusCodes.CREATED).send(user);
 }
 

@@ -4,7 +4,7 @@ import ExpressError from '../../utils/expressError';
 import { StatusCodes } from 'http-status-codes';
 import { prisma } from '../../utils/prisma';
 import { uploadFood } from './uploadFood.service';
-import {cloudinaryUtils} from '../../../cloudinary';
+import {cloudinaryUtils} from '../../cloudinary';
 export const uploadFoodController = async (req: Request<{},{},UploadFoodInput>, res: Response, next : NextFunction) => {
     if(!req.file) {
         return next(new ExpressError('Image is required',StatusCodes.BAD_REQUEST))

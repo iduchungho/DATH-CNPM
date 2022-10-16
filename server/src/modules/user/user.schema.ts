@@ -10,6 +10,7 @@ const userCore = {
     }).min(6,{
         message: 'Password must be at least 6 characters'
     }),
+
 }
 export const registerUserSchema = z.object({
     username : z.string({
@@ -19,6 +20,9 @@ export const registerUserSchema = z.object({
         required_error: 'Confirm password is required'
     }).min(6,{
         message: 'Confirm password must be at least 6 characters'
+    }),
+    role : z.string({
+        required_error: 'Role is required'
     }),
     ...userCore
 }).refine(data => data.password === data.confirmPassword, {

@@ -3,14 +3,15 @@ import { prisma } from "../../utils/prisma";
 import { registerUserInput } from "./user.schema";
 
 export const registerUser = async (user : Omit<registerUserInput, 'confirmPassword'>) => {
-    const {email,username,password} = user;
+    const {email,username,password,role} = user;
     const {hash,salt} = hashPassword(password);
     const newUser = await prisma.user.create({
         data: {
             email,
             username,
             password: hash,
-            salt
+            salt,
+            role
         },
         select: {
             id : true,

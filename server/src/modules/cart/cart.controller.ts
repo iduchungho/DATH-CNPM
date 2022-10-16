@@ -13,7 +13,7 @@ export const addToCartController = async (req : Request<{},{},addToCartInput>,  
     return res.status(StatusCodes.CREATED).send(cart);
 }
 
-export const  deleteCartController = async (req : Request<cartIdInput,{},{}>, res : Response, next : NextFunction) => {
+export const deleteCartController = async (req : Request<cartIdInput,{},{}>, res : Response, next : NextFunction) => {
     const userId = res.locals.user.id;
     const foundCart = await findCartById(req.params.cartId);
     if(!foundCart) {
@@ -24,4 +24,16 @@ export const  deleteCartController = async (req : Request<cartIdInput,{},{}>, re
     }
     const cart = await deleteCartById(foundCart.id)
     return res.status(StatusCodes.OK).send(cart);
+}
+
+export const viewCartController = async (req : Request<cartIdInput,{},{}>, res : Response, next : NextFunction) => {
+    const userId = res.locals.user.id;
+    const foundCart = await findCartById(req.params.cartId);
+    if(!foundCart) {
+        return next(new ExpressError('Cart not found',StatusCodes.NOT_FOUND))
+    }
+    if(userId !== foundCart.userId) {
+        return next(new ExpressError('Unauthorized',StatusCodes.UNAUTHORIZED))
+    }
+    return res.status(StatusCodes.OK).send(foundCart);
 }

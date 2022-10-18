@@ -83,12 +83,13 @@
     color: gainsboro;
 }
 .line{
-    margin: 3rem auto 10px auto;
-    width: 300px;
+    margin: 1rem auto 10px auto;
+    width: 100%;
     border: solid 0.5px #dee2e6;
 }
 
 .login-wallpaper{
+    margin-top: 7rem;
     width: 100%;
     height: 100%;
     display: flex;
@@ -126,6 +127,13 @@
 /* .font-site{
     width: 100rem;
 } */
+.right-container{
+    padding-left: 4rem;
+}
+
+.left-container{
+    padding-right: 5rem;
+}
 .bk-food-court-icon{
     width: 3.2rem;
     height: 3rem;
@@ -154,11 +162,30 @@
 
 .home-wallpaper{
     display: grid;
-    justify-content: center;
+    /* justify-content: center; */
+    margin-top: 4rem;
 }
 .food-container{
     display: flex;
     justify-content: center;
+}
+.w-100{
+    height: 20rem;
+    width: 100%;
+}
+.content{
+    display: flex;
+    justify-content: center;
+    padding-top: 1em;
+    padding-bottom: 1rem;
+}
+.food-card-area{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, 20rem);
+}
+.food-card{
+    height: 19rem;
 }
 @media only screen and (max-width: 769px) {
     .navbar-logo-text{

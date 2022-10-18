@@ -1,5 +1,6 @@
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import Card from 'react-bootstrap/Card';
 // import Form from 'react-bootstrap/Form';
 // import Nav from 'react-bootstrap/Nav';
 // import Dropdown from 'react-bootstrap/Dropdown';
@@ -17,7 +18,7 @@ export default function OffcanvasCart() {
     const [showbtn, setShowbtn] = useState(false);
     const handleShow = () => setShowbtn(true);
     const handleClose = () => setShowbtn(false);
-    
+
     return (
         <>
             <Button variant="light" onClick={handleShow} className='button'>
@@ -43,14 +44,37 @@ export default function OffcanvasCart() {
                                 Giỏ hàng của bạn hiện đang trống
                             </div>
                         </div>
-                        <div className='line'/>
+                        <div className='line' />
                         <div className='offcanvas-body-bills'>
                             Tổng hóa đơn
                         </div>
-                        <Button variant='primary' href = '/pay'> Tiến hành đặt hàng</Button>
+                        <Button variant='primary' href='/pay'> Tiến hành đặt hàng</Button>
                     </div>
                 </Offcanvas.Body>
             </Offcanvas>
         </>
     )
+}
+
+export function CartComponent() {
+    return (
+        <>
+            <Card variant='light' style={{ width: '18rem' }}>
+                <Card.Body>
+                    <Card.Title>Giỏ hàng</Card.Title>
+                    <GiCardboardBox className='box-nothing-icon' />
+                    <div className='message'>
+                        Giỏ hàng của bạn hiện đang trống
+                    </div>
+                    <div className='line' />
+                    Tổng Cộng
+                    <div className='message'>
+                        Đã bao gồm thuế nếu có
+                    </div>
+                    <div className='line'/>
+                    <Button value= 'primary'>Thanh toán</Button>
+                </Card.Body>
+            </Card>
+        </>
+    );
 }

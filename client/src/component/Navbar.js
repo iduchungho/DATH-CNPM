@@ -17,7 +17,7 @@ export default function NavbarTop() {
 
     return (
         <>
-            <Navbar bg="light" expand={'md'} key='md'>
+            <Navbar fixed='top' bg="light" expand={'md'} key='md'>
                 <Container fluid>
                     <Navbar.Toggle aria-controls='offcanvasNavbar-expand-sm' />
 
@@ -57,8 +57,10 @@ export default function NavbarTop() {
 
 export function NavbarBottom() {
     return(
-        <div>
-
-        </div>
+        <Navbar bg='light'>
+            <Container fluid>
+                <Navbar.Brand>SE 2022 Project</Navbar.Brand>
+            </Container>
+        </Navbar>
     );
 }

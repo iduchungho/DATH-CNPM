@@ -1,0 +1,107 @@
+.box-container{
+    display: flex;
+}
+
+.box1{
+    height: 133px;
+    width: 836px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    border: 2px solid rgba(191, 204, 206, 0.043);
+    box-shadow: 0 5px 8px rgba(8, 1, 1, 0.329);
+    margin: 40px;
+}
+.box2{
+    height: 262px;
+    width: 836px;
+    display: flex;
+    justify-content: space-around;
+   
+    flex-direction: column;
+    border-radius: 5px;
+    border: 2px solid rgba(191, 204, 206, 0.043);
+    box-shadow: 0 5px 8px rgba(8, 1, 1, 0.329);
+    margin: 40px;    
+}
+.box3{
+    height: 93px;
+    width: 836px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    border: 2px solid rgba(191, 204, 206, 0.043);
+    box-shadow: 0 5px 8px rgba(8, 1, 1, 0.329);
+    margin: 40px;
+}
+
+/* BOX2 */
+.head{
+    width: 200px;
+    height: 460px;
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 2px;
+    border: 2px solid rgba(191, 204, 206, 0.043);
+    box-shadow: 0 5px 8px rgba(8, 1, 1, 0.329);
+    margin: 40px;
+    
+}
+.firstline{
+    display: flex;
+    align-items:flex-end;
+    justify-content: space-between;
+    margin-top: 36px;
+}
+.firstline__item1{
+    font-weight: 600;
+}
+.firstline__item2{
+    font-weight: 600;
+    --tw-text-opacity: 1;
+    color: rgba(107, 114, 128, var(--tw-text-opacity));
+}
+.secondline{
+    margin-top: 21px;
+    display: flex;
+    align-items:flex-end;
+    justify-content: space-between;
+}
+.secondline__item1{
+    font-weight: 600;
+}
+/* .secondline__item2{
+    
+} */
+.thirdline{
+    margin-top: 50px;
+    display: flex;
+    align-items:flex-end;
+    justify-content: space-between;
+}
+.thirdline__item1{
+    font-weight: 600;
+}
+.thirdline__item2{
+    font-weight: 600;
+    --tw-text-opacity: 1;
+    color: rgba(239, 68, 68, var(--tw-text-opacity));
+    box-sizing:  border-box;
+    font-size:24px;
+   
+}
+.fourthline{
+    margin-top: 40px;
+    
+}
+.fourthline__item1-1{
+   
+    justify-content: center;
+}
+.fifthline{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+}

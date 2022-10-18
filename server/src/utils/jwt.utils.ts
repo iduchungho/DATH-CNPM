@@ -1,6 +1,8 @@
 import jwt from 'jsonwebtoken';
 import dotenv from 'dotenv'
-dotenv.config();
+if(process.env.NODE_ENV !== 'production') {
+    dotenv.config();
+}
 
 export const signJwt = (payload: Object, options?: jwt.SignOptions | undefined): string => {
     const privateKey = process.env.PRIVATE_KEY as string

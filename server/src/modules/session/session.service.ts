@@ -1,7 +1,9 @@
 import { signJwt, verifyJwt } from "../../utils/jwt.utils";
 import { prisma } from "../../utils/prisma"
 import dotenv from 'dotenv'
-dotenv.config();
+if(process.env.NODE_ENV !== 'production') {
+    dotenv.config();
+}
 import _ from 'lodash'
 export const createSession = (userId : string , userAgent : string) => {
     return prisma.session.create({

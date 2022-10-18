@@ -10,14 +10,7 @@ import { signJwt } from "../../utils/jwt.utils";
 import { createSession, deleteSession } from "../session/session.service";
 import { loginUserInput, registerUserInput } from "./user.schema";
 import { findUserByEmail, registerUser } from "./user.service";
-export const cookieOptions : CookieOptions= {
-    maxAge: 3.156e10,
-    httpOnly: true,
-    domain: 'localhost', // damh-cnpm.herokuapp.com , localhost
-    path: '/',
-    sameSite: 'lax',
-    secure : false,
-}
+import cookieOptions from "../../utils/cookieOption";
 export const registerUserController = async (req: Request<{}, {}, registerUserInput>, res: Response, next: NextFunction) => {
     const { email, username, password , role} = req.body;
     if(role !== 'user') {

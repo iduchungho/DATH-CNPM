@@ -14,8 +14,8 @@ export const createSession = (userId : string , userAgent : string) => {
 
 export const reIssueAccessToken = async (refreshToken : string) => {
     const accessTokenTtl = "15m";
-    const { decoded } = verifyJwt(refreshToken);
-    if (!decoded || !_.get(decoded, "sessionId")) {
+    const { decoded , expired} = verifyJwt(refreshToken);
+    if (expired || !decoded || !_.get(decoded, "sessionId")) {
         return false;
     }
     const sessionId = _.get(decoded, "sessionId");

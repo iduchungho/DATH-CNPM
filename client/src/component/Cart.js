@@ -72,7 +72,7 @@ export function CartComponent() {
                         Đã bao gồm thuế nếu có
                     </div>
                     <div className='line'/>
-                    <Button value= 'primary'>Thanh toán</Button>
+                    <Button value='primary' href='/pay'>Thanh toán</Button>
                 </Card.Body>
             </Card>
         </>

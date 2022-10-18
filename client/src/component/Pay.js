@@ -2,7 +2,7 @@ import React from 'react';
 import './Style.css';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import { Card } from 'react-bootstrap';
+import Card from 'react-bootstrap/Card';
 import './Pay.css'
 export default function PayComponent() {
     return (
@@ -93,7 +93,7 @@ export default function PayComponent() {
                     <input className='box1__item3' type="radio" name="selection" id="item3" />
                     <label for="item3">nhận tại cửa hàng</label>
                 </div>
-                <div className="box2">
+                {/* <div className="box2">
                     <h3 className='box2__item1'>Thông tin liên hệ</h3>
                     <div className="box2__item2">
                         <input type="text" placeholder="Tên Người Nhận" name="uname" />
@@ -101,7 +101,20 @@ export default function PayComponent() {
                     <div className="box2__item3">
                         <input type="password" placeholder="Số Điện Thoại" name="psw" />
                     </div>
-                </div>
+                </div> */}
+                <Card variant='light' style={{ width: '50rem' }}>
+                    <Card.Title>
+                        Thông tin liên hệ
+                    </Card.Title>
+                    <Card.Body>
+                        <Form>
+                            <Form.Group className="mb-3">
+                                <Form.Control placeholder = "Tên người nhận" ></Form.Control>
+                            </Form.Group>
+                        </Form>
+                    </Card.Body>
+
+                </Card>
                 <div className="box3">
                     <heading className="box3__item1">Phương thức thanh toán</heading>
                     <div className="box3__item2">

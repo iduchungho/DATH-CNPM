@@ -6,7 +6,7 @@ import Home from './component/Home'
 import PayComponent from './component/Pay';
 import Tutorial from './component/Tutorial';
 import { LoginPage, RegisterPage } from './component/Login'
-
+import FoodForm from './component/uploadFood';
 function App() {
   return (
     <>
@@ -18,6 +18,7 @@ function App() {
           <Route path='/register' element={<RegisterPage />} />
           <Route path='/pay' element={<PayComponent />} />
           <Route path='/tutorial' element={<Tutorial />} />
+          <Route path = '/uploadFood' element = {<FoodForm />}/>
         </Routes>
       </Router>
     </>

@@ -8,8 +8,8 @@ import Form from 'react-bootstrap/Form';
 // import Navbar from 'react-bootstrap/Navbar';
 // import Dropdown from 'react-bootstrap/Dropdown';
 
-import React from 'react';
-// import axios from 'axios';
+import React, { useState } from 'react';
+import axios from 'axios';
 import {
     BsPerson
     //BsXLg
@@ -40,6 +40,21 @@ export default function OffcanvasLogin() {
 export function LoginPage() {
     // const { data } = await axios.get('https://damh-cnpm.herokuapp.com/api/uploadFoods');
     // console.log(data);
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        try {
+            const {data} = await axios.post(`${serverURL}/api/users/login`, {email,password},{
+                withCredentials: true
+            })
+            console.log(data);
+        }
+        catch(e) {
+            console.log(e);
+        }
+    }
     return (
         <div className='login-wallpaper'>
             <div className='login-container'>
@@ -50,10 +65,10 @@ export function LoginPage() {
                             <BKLogoComponent />
                         </Card.Title>
                         <Card.Text className='card-body-container'>Đăng nhập</Card.Text>
-                        <Form className='form-site'>
+                        <Form className='form-site' onSubmit = {handleSubmit}>
                             <Form.Group className="mb-3" controlId="formBasicEmail">
                                 <Form.Label>Email address</Form.Label>
-                                <Form.Control type="email" placeholder="Enter email" />
+                                <Form.Control type="email" placeholder="Enter email" onChange={(e)=>{setEmail(e.target.value)}} />
                                 {/* <Form.Text className="text-muted">
                                     We'll never share your email with anyone else.
                                 </Form.Text> */}
@@ -61,7 +76,7 @@ export function LoginPage() {
 
                             <Form.Group className="mb-3" controlId="formBasicPassword">
                                 <Form.Label>Password</Form.Label>
-                                <Form.Control type="password" placeholder="Password" />
+                                <Form.Control type="password" placeholder="Password" onChange={(e)=>{setPassword(e.target.value)}} />
                             </Form.Group>
                             <Form.Group className="mb-3" controlId="formBasicCheckbox">
                                 <Form.Check type="checkbox" label="Check me out" />

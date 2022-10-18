@@ -59,7 +59,7 @@ export const getCurrentUser = async (req: Request, res: Response, next: NextFunc
     return res.status(StatusCodes.OK).send(user);
 }
 
-export const logoutHandler = async (req: Request, res: Response, next: NextFunction) => {
+export const logoutController = async (req: Request, res: Response, next: NextFunction) => {
     const sessionId = res.locals.user.sessionId;
     res.locals.user = null;
     await deleteSession(sessionId);
@@ -69,4 +69,13 @@ export const logoutHandler = async (req: Request, res: Response, next: NextFunct
         accessToken : "",
         refreshToken : ""
     });
+}
+
+export const registerEmployeeController = async (req: Request<{}, {}, registerUserInput>, res: Response, next: NextFunction) => {
+    const { email, username, password , role} = req.body;
+    if(role !== 'employee') {
+        return next(new ExpressError('Unauthorized',StatusCodes.UNAUTHORIZED))
+    }
+    const user = await registerUser({ email, username, password , role });
+    res.status(StatusCodes.CREATED).send(user);
 }

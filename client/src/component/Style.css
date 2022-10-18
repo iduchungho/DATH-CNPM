@@ -89,7 +89,7 @@
 }
 
 .login-wallpaper{
-    margin-top: 7rem;
+    /* margin-top: 7rem; */
     width: 100%;
     height: 100%;
     display: flex;
@@ -163,7 +163,7 @@
 .home-wallpaper{
     display: grid;
     /* justify-content: center; */
-    margin-top: 4rem;
+    /* margin-top: 4rem; */
 }
 .food-container{
     display: flex;

@@ -202,7 +202,7 @@ export default function Home() {
 
 export function CarouselComponent() {
     return (
-        <Carousel fade>
+        <Carousel fade className='carousel-slide'>
             <Carousel.Item>
                 <img
                     className="w-100"

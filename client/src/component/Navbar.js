@@ -17,7 +17,7 @@ export default function NavbarTop() {
 
     return (
         <>
-            <Navbar fixed='top' bg="light" expand={'md'} key='md'>
+            <Navbar sticky='top' bg="light" expand={'md'} key='md'>
                 <Container fluid>
                     <Navbar.Toggle aria-controls='offcanvasNavbar-expand-sm' />
 

@@ -2,6 +2,7 @@ import { NextFunction, Request, Response } from "express";
 import _ from 'lodash'
 import { reIssueAccessToken } from "../modules/session/session.service";
 import cookieOptions from "../utils/cookieOption";
+
 import { verifyJwt } from "../utils/jwt.utils";
 const deserializeUser = async (req: Request, res: Response, next : NextFunction) => {
     const accessToken = _.get(req.cookies, "accessToken") || _.get(req, "headers.authorization", "").replace(

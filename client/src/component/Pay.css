@@ -3,38 +3,14 @@
     display: flex;
     justify-content: center;
 }
-
-.box1{
-    height: 133px;
-    width: 836px;
-    display: flex;
-    flex-direction: column;
-    border-radius: 5px;
-    border: 2px solid rgba(191, 204, 206, 0.043);
-    box-shadow: 0 5px 8px rgba(8, 1, 1, 0.329);
-    margin: 40px;
-}
 .box2{
-    height: 262px;
-    width: 836px;
-    display: flex;
-    justify-content: space-around;
-   
-    flex-direction: column;
-    border-radius: 5px;
-    border: 2px solid rgba(191, 204, 206, 0.043);
-    box-shadow: 0 5px 8px rgba(8, 1, 1, 0.329);
-    margin: 40px;    
+    margin-top: 40px;
 }
 .box3{
-    height: 93px;
-    width: 836px;
-    display: flex;
-    flex-direction: column;
-    border-radius: 5px;
-    border: 2px solid rgba(191, 204, 206, 0.043);
-    box-shadow: 0 5px 8px rgba(8, 1, 1, 0.329);
-    margin: 40px;
+    margin-top: 40px;
+}
+.BOX2{
+    margin-left: 40px;
 }
 
 /* BOX2 */
@@ -51,59 +27,66 @@
     margin: 40px;
     
 }
-.firstline{
-    display: flex;
-    align-items:flex-end;
-    justify-content: space-between;
-    margin-top: 36px;
-}
-.firstline__item1{
+
+
+.Tamtinh{
     font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
 }
-.firstline__item2{
+.gia1{
     font-weight: 600;
     --tw-text-opacity: 1;
     color: rgba(107, 114, 128, var(--tw-text-opacity));
 }
-.secondline{
-    margin-top: 21px;
+.dongdau{
     display: flex;
     align-items:flex-end;
     justify-content: space-between;
 }
-.secondline__item1{
+
+.gia2{
     font-weight: 600;
+    --tw-text-opacity: 1;
+    color: rgba(107, 114, 128, var(--tw-text-opacity));
 }
-/* .secondline__item2{
-    
-} */
-.thirdline{
-    margin-top: 50px;
+.donghai{
     display: flex;
     align-items:flex-end;
     justify-content: space-between;
+
 }
-.thirdline__item1{
+.giamgia{
     font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
 }
-.thirdline__item2{
+.gia3{
     font-weight: 600;
     --tw-text-opacity: 1;
     color: rgba(239, 68, 68, var(--tw-text-opacity));
-    box-sizing:  border-box;
-    font-size:24px;
-   
-}
-.fourthline{
-    margin-top: 40px;
     
+    font-size:24px;
 }
-.fourthline__item1-1{
-   
-    justify-content: center;
-}
-.fifthline{
-    margin-top: 100px;
+.dongba{
     display: flex;
-    justify-content: center;
+    align-items:flex-end;
+    justify-content: space-between;
+
+}
+.tongcong{
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+
+.ghichu{
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+.dong4{
+    display: flex;
+    align-items:center;
 }

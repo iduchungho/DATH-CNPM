@@ -13,6 +13,9 @@ export const uploadFoodSchema = z.object({
     averageRating : z.string({
         required_error : 'Average Rating is required'
     }),
+    description : z.string({
+        required_error : 'Description is required'
+    })
 })
 export const deleteUploadedFoodSchema = z.object({
     uploadFoodId : z.string({

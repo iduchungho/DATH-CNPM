@@ -8,6 +8,7 @@ export const uploadFood = async (input : UploadFoodInput) => {
             category : input.category,
             price : input.price,
             averageRating : input.averageRating,
+            description : input.description
         }
     })
     return food;

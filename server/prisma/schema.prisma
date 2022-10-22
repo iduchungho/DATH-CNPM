@@ -36,6 +36,7 @@ model UploadFood {
     createdAt DateTime @default(now())
     updatedAt DateTime @updatedAt
     foodImage FoodImage?
+    description String
 }
 model OrderedFood {
     id String @id @default(auto()) @map("_id") @db.ObjectId

@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import NavbarTop from './component/Navbar'
+import NavbarTop, { NavbarBottom } from './component/Navbar'
 import Home from './component/Home'
 import PayComponent from './component/Pay';
 import Tutorial from './component/Tutorial';
@@ -20,6 +20,7 @@ function App() {
           <Route path='/tutorial' element={<Tutorial />} />
           <Route path = '/uploadFood' element = {<FoodForm />}/>
         </Routes>
+        <NavbarBottom/>
       </Router>
     </>
   );

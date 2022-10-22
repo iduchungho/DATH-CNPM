@@ -1,7 +1,134 @@
-.justify-content-end {
-    justify-content: left !important;
+/* =========================================================== */
+/* Style.css file ============================================ */
+/* Made by @kawasaki-iduchungho ============================== */
+/* =========================================================== */
+/* =========================================================== */
+/*====================== Style for Card.js ===================*/
+/* =========================================================== */
+.offcanvas-body-container {
+    display: grid;
+}
+.btn-icon {
+    margin-top: 4px;
+    margin-right: 5px;
+}
+.offcanvas-body-item-nothing {
+    display: grid;
+    justify-content: center;
+}
+.box-nothing-icon {
+    display: flex;
+    font-size: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+.message {
+    color: gainsboro;
+}
+/* =========================================================== */
+/* =====================Style for Home.js===================== */
+/* =========================================================== */
+.carousel-component{
+    justify-content: center;
 }
 
+.right-container {
+    padding-left: 4rem;
+}
+
+.left-container {
+    padding-right: 5rem;
+}
+
+.bk-food-court-icon {
+    width: 3.2rem;
+    height: 3rem;
+    display: flex;
+}
+
+.bk-food-court-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.bk-food-court-container {
+    display: flex;
+    border-radius: 1rem;
+    padding: 0px 15px 0px 15px;
+    display: flex;
+    font-size: 1.5rem;
+    justify-content: center;
+}
+.card-body-container {
+    width: 16rem;
+}
+
+.home-wallpaper {
+    display: grid;
+    /* justify-content: center; */
+    /* margin-top: 4rem; */
+}
+
+.food-container {
+    display: flex;
+    justify-content: center;
+}
+
+.w-100 {
+    height: 20rem;
+    width: 100%;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    padding-top: 1em;
+    padding-bottom: 1rem;
+}
+
+.food-card-area {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, 20rem);
+}
+
+.food-card {
+    height: 19rem;
+}
+/* =========================================================== */
+/* ===================Style for Login.js====================== */
+/* =========================================================== */
+.login-wallpaper{
+    /* margin-top: 7rem; */
+    width: 100%;
+    height: 200%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container{
+    margin-top: 3rem;
+    /* max-width: 600px;
+    background-color: grey;
+    display: grid;
+    border: solid 1px red; */
+}
+
+.button{
+    margin-left: 10px;
+    /* margin-right: 10px; */
+    display: flex;
+    border-radius: 1.3rem;
+    border: 1px solid #dee2e6;
+}
+/* =========================================================== */
+/* ===================Style for Navbar.js===================== */
+/* =========================================================== */
 .navbar-logo{
     display: grid;
     margin-right: auto;
@@ -16,6 +143,9 @@
     width: 2rem;
 }
 
+.justify-content-end {
+    justify-content: left !important;
+}
 .navbar-logo-text{
     /* background-color: rgb(199, 217, 237); */
     border-radius: 1rem;
@@ -43,6 +173,17 @@
     /* padding-bottom: 10px; */
 }
 
+.navbar-bottom{
+    /* position: absolute;
+    bottom: 0;
+    background-color: rgba(148, 146, 146, 0.75);
+    display: flex; */
+    margin-top: 16rem;
+}
+/* =========================================================== */
+/* ========================Other============================== */
+/* =========================================================== */
+
 .toggle-login{
     margin-left: 10px;
 }
@@ -51,142 +192,15 @@
     width: 600px !important;
 }
 
-.button{
-    margin-left: 10px;
-    /* margin-right: 10px; */
-    display: flex;
-    border-radius: 1.3rem;
-    border: 1px solid #dee2e6;
-}
-
-.btn-icon{
-    margin-top: 4px;
-    margin-right: 5px;
-}
-
-.offcanvas-body-item-nothing{
-    display: grid;
-    justify-content: center;
-}
-.offcanvas-body-container{
-    display: grid;
-}
-.box-nothing-icon{
-    display: flex;
-    font-size: 5rem;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 30px;
-    margin-top: 30px;
-}
-.message{
-    color: gainsboro;
-}
 .line{
     margin: 1rem auto 10px auto;
     width: 100%;
     border: solid 0.5px #dee2e6;
 }
-
-.login-wallpaper{
-    /* margin-top: 7rem; */
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.login-container{
-    margin-top: 3rem;
-    /* max-width: 600px;
-    background-color: grey;
-    display: grid;
-    border: solid 1px red; */
-}
-
-/* .login-title{
-    display: flex;
-    justify-content: center;
-}
-
-.login-form{
-    height: 15rem;
-}
-
-.login-btn{
-    display: flex;
-    justify-content: center;
-} */
-
-/* .form-container{
-    margin-left: 10rem;
-    margin-right: 10rem;
-} */
-
-/* .font-site{
-    width: 100rem;
-} */
-.right-container{
-    padding-left: 4rem;
-}
-
-.left-container{
-    padding-right: 5rem;
-}
-.bk-food-court-icon{
-    width: 3.2rem;
-    height: 3rem;
-    display: flex;
-}
-.bk-food-court-text{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 5px;
-}
-.bk-food-court-container{
-    display: flex;
-    border-radius: 1rem;
-    padding: 0px 15px 0px 15px;
-    display: flex;
-    font-size: 1.5rem;
-    justify-content: center;
-}
-.card-body-container{
-    width: 16rem;
-}
-/* .card-form-title{
-    font-size: medium;
-} */
-
-.home-wallpaper{
-    display: grid;
-    /* justify-content: center; */
-    /* margin-top: 4rem; */
-}
-.food-container{
-    display: flex;
-    justify-content: center;
-}
-.w-100{
-    height: 20rem;
-    width: 100%;
-}
-.content{
-    display: flex;
-    justify-content: center;
-    padding-top: 1em;
-    padding-bottom: 1rem;
-}
-.food-card-area{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: repeat(3, 20rem);
-}
-.food-card{
-    height: 19rem;
-}
+/* =========================================================== */
+/* =========================================================== */
+/* =========================================================== */
+/* =========================================================== */
 @media only screen and (max-width: 769px) {
     .navbar-logo-text{
         font-size: 1rem;

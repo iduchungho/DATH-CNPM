@@ -27,14 +27,14 @@ export default function OffcanvasCart() {
                     Giỏ hàng
                 </div>
             </Button>
-            <Offcanvas show={showbtn} onHide={handleClose} placement="end" backdrop={false}>
+            <Offcanvas show={showbtn} onHide={handleClose} placement="end" backdrop="static">
                 <Offcanvas.Header>
                     <Offcanvas.Title>
                         <BsXLg onClick={handleClose} />
                     </Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body>
-                    <div className='offcanvas-body-container'>
+                    {/* <div className='offcanvas-body-container'>
                         <div className='offcanvas-body-title'>
                             <h3>Giỏ hàng</h3>
                         </div>
@@ -48,8 +48,10 @@ export default function OffcanvasCart() {
                         <div className='offcanvas-body-bills'>
                             Tổng hóa đơn
                         </div>
-                        <Button variant='primary' href='/pay'> Tiến hành đặt hàng</Button>
+                        <div className='line'/>
                     </div>
+                    <Button variant='primary' href='/pay'> Tiến hành đặt hàng</Button> */}
+                    <CartComponent/>
                 </Offcanvas.Body>
             </Offcanvas>
         </>
@@ -59,7 +61,8 @@ export default function OffcanvasCart() {
 export function CartComponent() {
     return (
         <>
-            <Card variant='light' style={{ width: '18rem' }}>
+            <Card variant='light'>
+                {/* style={{ width: '18rem' }} */}
                 <Card.Body>
                     <Card.Title>Giỏ hàng</Card.Title>
                     <GiCardboardBox className='box-nothing-icon' />

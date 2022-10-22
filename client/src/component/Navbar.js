@@ -57,7 +57,7 @@ export default function NavbarTop() {
 
 export function NavbarBottom() {
     return(
-        <Navbar bg='light'>
+        <Navbar bg='light' className='navbar-bottom'>
             <Container fluid>
                 <Navbar.Brand>SE 2022 Project</Navbar.Brand>
             </Container>

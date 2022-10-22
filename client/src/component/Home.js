@@ -6,7 +6,7 @@ import { BsPlusLg } from "react-icons/bs";
 
 import './Style.css';
 import { CartComponent } from './Cart';
-import { NavbarBottom } from './Navbar';
+import OverviewFood from './OverviewFood';
 
 export function BKLogoComponent() {
     return (
@@ -33,14 +33,15 @@ export function BKLogoComponent() {
 export default function Home() {
     return (
         <>
+            <CarouselComponent className = 'carousel-component'/>
             <div className='home-wallpaper'>
-                {CarouselComponent()}
                 <div className='content'>
                     <h3>Tất cả sản phẩm</h3>
                 </div>
                 <div className='food-container'>
                     <div className='left-container'>
-                        <Card variant = 'light' style={{ width: '10rem' }}>
+                        <Card variant = 'light'>
+                            {/* style={{ width: '10rem' }} */}
                             <Card.Body>
                                 <div>Đồ ăn</div>
                                 <div className='line'/>
@@ -55,7 +56,7 @@ export default function Home() {
                                 <Form className="d-flex">
                                     <Form.Control
                                         type="search"
-                                        placeholder="Search"
+                                        placeholder="Tìm kiếm món ăn"
                                         className="me-2"
                                         aria-label="Search"
                                     />
@@ -71,7 +72,18 @@ export default function Home() {
                                         <Card.Body>
                                             <Card.Title>Bún bò</Card.Title>
                                             <Card.Text>
-                                                Bla bla
+                                                Description 1
+                                            </Card.Text>
+                                            {/* <Button variant="primary"><BsPlusLg/></Button> */}
+                                            <OverviewFood/>
+                                        </Card.Body>
+                                    </Card>
+                                    <Card style={{ width: '10rem' }} className='food-card'>
+                                        <Card.Img variant="top" src="https://s3-bucket.s3.cloud.cmctelecom.vn/34778520/products/306685/1632888139-3.jpg" />
+                                        <Card.Body>
+                                            <Card.Title>Bún bò</Card.Title>
+                                            <Card.Text>
+                                                Description
                                             </Card.Text>
                                             <Button variant="primary"><BsPlusLg/></Button>
                                         </Card.Body>
@@ -81,7 +93,7 @@ export default function Home() {
                                         <Card.Body>
                                             <Card.Title>Bún bò</Card.Title>
                                             <Card.Text>
-                                                Bla bla
+                                                Description
                                             </Card.Text>
                                             <Button variant="primary"><BsPlusLg/></Button>
                                         </Card.Body>
@@ -91,7 +103,7 @@ export default function Home() {
                                         <Card.Body>
                                             <Card.Title>Bún bò</Card.Title>
                                             <Card.Text>
-                                                Bla bla
+                                                Description
                                             </Card.Text>
                                             <Button variant="primary"><BsPlusLg/></Button>
                                         </Card.Body>
@@ -101,7 +113,7 @@ export default function Home() {
                                         <Card.Body>
                                             <Card.Title>Bún bò</Card.Title>
                                             <Card.Text>
-                                                Bla bla
+                                                Description
                                             </Card.Text>
                                             <Button variant="primary"><BsPlusLg/></Button>
                                         </Card.Body>
@@ -111,7 +123,7 @@ export default function Home() {
                                         <Card.Body>
                                             <Card.Title>Bún bò</Card.Title>
                                             <Card.Text>
-                                                Bla bla
+                                                Description
                                             </Card.Text>
                                             <Button variant="primary"><BsPlusLg/></Button>
                                         </Card.Body>
@@ -121,7 +133,7 @@ export default function Home() {
                                         <Card.Body>
                                             <Card.Title>Bún bò</Card.Title>
                                             <Card.Text>
-                                                Bla bla
+                                                Description
                                             </Card.Text>
                                             <Button variant="primary"><BsPlusLg/></Button>
                                         </Card.Body>
@@ -131,7 +143,7 @@ export default function Home() {
                                         <Card.Body>
                                             <Card.Title>Bún bò</Card.Title>
                                             <Card.Text>
-                                                Bla bla
+                                                Description
                                             </Card.Text>
                                             <Button variant="primary"><BsPlusLg/></Button>
                                         </Card.Body>
@@ -141,7 +153,7 @@ export default function Home() {
                                         <Card.Body>
                                             <Card.Title>Bún bò</Card.Title>
                                             <Card.Text>
-                                                Bla bla
+                                                Description
                                             </Card.Text>
                                             <Button variant="primary"><BsPlusLg/></Button>
                                         </Card.Body>
@@ -151,7 +163,7 @@ export default function Home() {
                                         <Card.Body>
                                             <Card.Title>Bún bò</Card.Title>
                                             <Card.Text>
-                                                Bla bla
+                                                Description
                                             </Card.Text>
                                             <Button variant="primary"><BsPlusLg/></Button>
                                         </Card.Body>
@@ -161,7 +173,7 @@ export default function Home() {
                                         <Card.Body>
                                             <Card.Title>Bún bò</Card.Title>
                                             <Card.Text>
-                                                Bla bla
+                                                Description
                                             </Card.Text>
                                             <Button variant="primary"><BsPlusLg/></Button>
                                         </Card.Body>
@@ -171,17 +183,7 @@ export default function Home() {
                                         <Card.Body>
                                             <Card.Title>Bún bò</Card.Title>
                                             <Card.Text>
-                                                Bla bla
-                                            </Card.Text>
-                                            <Button variant="primary"><BsPlusLg/></Button>
-                                        </Card.Body>
-                                    </Card>
-                                    <Card style={{ width: '10rem' }} className='food-card'>
-                                        <Card.Img variant="top" src="https://s3-bucket.s3.cloud.cmctelecom.vn/34778520/products/306685/1632888139-3.jpg" />
-                                        <Card.Body>
-                                            <Card.Title>Bún bò</Card.Title>
-                                            <Card.Text>
-                                                Bla bla
+                                                Description
                                             </Card.Text>
                                             <Button variant="primary"><BsPlusLg /></Button>
                                         </Card.Body>
@@ -194,7 +196,6 @@ export default function Home() {
                         <CartComponent/>
                     </div>
                 </div>
-                <NavbarBottom />
             </div>
         </>
     )

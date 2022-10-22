@@ -1,0 +1,24 @@
+.img-ovvfood{
+    height: 7rem;
+    padding-right: 2rem;
+}
+.food-description-container{
+    display: flex;
+}
+.food-description{
+    display: grid;
+    padding-right: 9rem;
+}
+
+.food-price{
+    display: flex;
+    justify-content: right;
+}
+.input-box{
+    margin-top: 2rem;
+}
+.payment{
+    width: 39%;
+    position: fixed;
+    bottom: 2rem;
+}

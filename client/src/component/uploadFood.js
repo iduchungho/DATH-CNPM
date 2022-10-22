@@ -44,29 +44,29 @@ function FoodForm() {
         <>  
             <Container className={clsx("mt-5")} style={{minWidth:300, maxWidth:500}}>
                 <div className={clsx("text-center",styles.topic)}>
-                    New food
+                THÊM MÓN ĂN VÀO MENU
                 </div>
                 <section className={clsx("d-flex flex-column align-items-center p-3",styles.box)}>
                 <Form className="w-100" onSubmit={(e)=>{e.preventDefault(); handleSubmit(e)}}>
 
 
                     <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Label>Title:</Form.Label>
+                        <Form.Label>Tên món ăn :</Form.Label>
                         <Form.Control required type="text" placeholder="Enter your title" onChange={(e)=>{setTitle(e.target.value)}} />
                     </Form.Group>
 
 
                     <Form.Group className="position-relative mb-3">
-                    <Form.Label>Category:</Form.Label>
+                    <Form.Label>Loại:</Form.Label>
                     <Form.Select required aria-label="Default select example" onChange={(e)=>{setCategory(e.target.value)}}>
-                    <option value="Food">Food</option>
-                    <option value="Drink">Drink</option>
+                    <option value="Food">Thức ăn</option>
+                    <option value="Drink">Đồ uống</option>
                     </Form.Select>
                     </Form.Group>
 
 
                     <Form.Group className="position-relative mb-3">
-                        <Form.Label>File</Form.Label>
+                        <Form.Label>Hình ảnh:</Form.Label>
                         <Form.Control
                         type="file"
                         required
@@ -76,7 +76,7 @@ function FoodForm() {
                         />
                     </Form.Group>
                     <fieldset className="starability-basic mb-3" onChange={(e)=>{setAverageRating(e.target.value)}}>
-                    <legend>Rating:</legend>
+                    <legend>Đánh giá:</legend>
                     <input type="radio" id="first-rate1" name="rating" value="1" />
                     <label htmlFor="first-rate1" title="Terrible">1 star</label>
                     <input type="radio" id="first-rate2" name="rating" value="2" />
@@ -90,15 +90,15 @@ function FoodForm() {
                     </fieldset>
 
                     <Form.Group className="mb-3" controlId="formBasicPassword">
-                        <Form.Label>Price:</Form.Label>
+                        <Form.Label>Giá:</Form.Label>
                         <InputGroup className="mb-3">
-                            <InputGroup.Text>$</InputGroup.Text>
+                            <InputGroup.Text>đ</InputGroup.Text>
                             <Form.Control required type="number" aria-label="Amount (to the nearest dollar)" onChange={(e)=>{setPrice(e.target.value)}}/>
                         </InputGroup>
                     </Form.Group>
 
                     <Button variant="primary" type="submit">
-                        Submit
+                    Lưu món ăn
                     </Button>
                 </Form>
                 </section>

@@ -13,7 +13,7 @@ export default function OverviewFood(foodID) {
     return (
         <>
             <Button variant="light" onClick={handleShow}>
-                Tổng quan
+                Chi tiết
             </Button>
             <Offcanvas show={showbtn} onHide={handleClose} placement="end" backdrop={true}>
                 <Offcanvas.Header>
@@ -25,20 +25,25 @@ export default function OverviewFood(foodID) {
                     <div className="line" />
                     <div className="food-description-container">
                         <img
-                            src="https://s3-bucket.s3.cloud.cmctelecom.vn/34778520/products/306685/1632888139-3.jpg"
+                            src={foodID.src}
                             className="img-ovvfood"
                         />
                         <div className="food-description">
                             <h3>{foodID.foodName}</h3>
-                            <div>Nước dùng ngọt thịt, <br/>ăn kèm với rau sống</div>
+                            <p>{foodID.descrip}</p>
                         </div>
-                        <h3 className="food-price">{foodID.price}</h3>
+                        <h4 className="food-price">{foodID.price}</h4>
                     </div>
                     <div className="line" />
+                    <br></br>
                     <Form className="input-box">
                         <Form.Group className="mb-3">
-                            <Form.Label><h3>Ghi chú</h3></Form.Label>
-                            <Form.Control />
+                            <Form.Label><h4>Ghi chú</h4></Form.Label>
+                            <Form.Control
+                                placeholder="Thêm yêu cầu về món ăn (nếu có)"
+                                aria-label="Username"
+                                aria-describedby="basic-addon1"
+                            />
                         </Form.Group>
                     </Form>
                     <div className="line"/>

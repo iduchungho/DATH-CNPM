@@ -34,7 +34,7 @@ export default function NavbarTop() {
                     >
                         <Offcanvas.Header closeButton>
                             <Offcanvas.Title id="offcanvasNavbarLabel-expand-sm">
-                                <BKLogoComponent />
+                                <BKLogoComponent/>
                             </Offcanvas.Title>
                         </Offcanvas.Header>
                         <Offcanvas.Body>

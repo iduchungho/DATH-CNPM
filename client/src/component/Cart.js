@@ -70,7 +70,7 @@ export function CartComponent() {
                         Giỏ hàng của bạn hiện đang trống
                     </div>
                     <div className='line' />
-                    Tổng Cộng
+                        Tổng Cộng
                     <div className='message'>
                         Đã bao gồm thuế nếu có
                     </div>

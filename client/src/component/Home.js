@@ -67,123 +67,124 @@ export default function Home() {
                                 <div className='line' />
                                 {/*food card area*/}
                                 <div className='food-card-area'>
-                                    <Card style={{ width: '10rem' }} className= 'food-card'>
+                                    <Card style={{ width: '10rem'}} className= 'food-card'>
                                         <Card.Img variant="top" src="https://s3-bucket.s3.cloud.cmctelecom.vn/34778520/products/306685/1632888139-3.jpg" />
                                         <Card.Body>
                                             <Card.Title>Bún bò</Card.Title>
                                             <Card.Text>
-                                                Description 1
+                                                25.000đ
                                             </Card.Text>
                                             {/* <Button variant="primary"><BsPlusLg/></Button> */}
-                                            <OverviewFood/>
+                                            <OverviewFood foodID='1' foodName="Bun bo" price="25.000 đồng"/>
                                         </Card.Body>
                                     </Card>
-                                    <Card style={{ width: '10rem' }} className='food-card'>
-                                        <Card.Img variant="top" src="https://s3-bucket.s3.cloud.cmctelecom.vn/34778520/products/306685/1632888139-3.jpg" />
+                                    <Card style={{width:'10rem'}} className='food-card'>
+                                        <Card.Img variant="top" style={{height: '9.4rem'}} src="https://s3-bucket.s3.cloud.cmctelecom.vn/34778520/products/307416/1632889913-Bo-vin-nh.jpg" />
                                         <Card.Body>
-                                            <Card.Title>Bún bò</Card.Title>
+                                            <Card.Title>Bò viên to</Card.Title>
                                             <Card.Text>
-                                                Description
+                                                20.000đ
+                                            </Card.Text>
+                                            {/*<Button variant="primary"><BsPlusLg/></Button> */}
+                                            <OverviewFood foodID='2' foodName ="Bò viên to" price="20.000 đồng"/>
+                                        </Card.Body>
+                                    </Card>
+                                    <Card style={{width: '10rem' }} className='food-card'>
+                                        <Card.Img variant="top" style={{ height: '9.8rem'}} src="https://s3-bucket.s3.cloud.cmctelecom.vn/34778520/products/307498/1632891187-quay-to.jpg" />
+                                        <Card.Body>
+                                            <Card.Title>Quẩy to</Card.Title>
+                                            <Card.Text>
+                                                10.000đ
+                                            </Card.Text>
+                                            <Button variant="primary"><BsPlusLg/></Button>
+                                        </Card.Body>
+                                    </Card>
+                                    <Card style={{ width: '10rem'}} className='food-card'>
+                                        <Card.Img variant="top" style={{height: '9.6rem'}} src="https://s3-bucket.s3.cloud.cmctelecom.vn/34778520/products/307663/1632892166-gio-tai-to.jpg" />
+                                        <Card.Body>
+                                            <Card.Title>Giò tai to</Card.Title>
+                                            <Card.Text>
+                                                20.000đ
                                             </Card.Text>
                                             <Button variant="primary"><BsPlusLg/></Button>
                                         </Card.Body>
                                     </Card>
                                     <Card style={{ width: '10rem' }} className='food-card'>
-                                        <Card.Img variant="top" src="https://s3-bucket.s3.cloud.cmctelecom.vn/34778520/products/306685/1632888139-3.jpg" />
+                                        <Card.Img variant="top" src="https://s3-bucket.s3.cloud.cmctelecom.vn/34778520/products/338641/1633852908-nhau-to.jpg" />
                                         <Card.Body>
-                                            <Card.Title>Bún bò</Card.Title>
+                                            <Card.Title>Nhậu to</Card.Title>
                                             <Card.Text>
-                                                Description
+                                                150.000đ
                                             </Card.Text>
                                             <Button variant="primary"><BsPlusLg/></Button>
                                         </Card.Body>
                                     </Card>
                                     <Card style={{ width: '10rem' }} className='food-card'>
-                                        <Card.Img variant="top" src="https://s3-bucket.s3.cloud.cmctelecom.vn/34778520/products/306685/1632888139-3.jpg" />
+                                        <Card.Img variant="top" style={{ height: '100rem'}} src="https://s3-bucket.s3.cloud.cmctelecom.vn/34778520/products/338643/1633853304-bun.jpg" />
                                         <Card.Body>
-                                            <Card.Title>Bún bò</Card.Title>
+                                            <Card.Title>Bún thêm</Card.Title>
                                             <Card.Text>
-                                                Description
+                                                5000đ
                                             </Card.Text>
                                             <Button variant="primary"><BsPlusLg/></Button>
                                         </Card.Body>
                                     </Card>
                                     <Card style={{ width: '10rem' }} className='food-card'>
-                                        <Card.Img variant="top" src="https://s3-bucket.s3.cloud.cmctelecom.vn/34778520/products/306685/1632888139-3.jpg" />
+                                        <Card.Img variant="top" style={{  height: '9.5rem'}} src="https://s3-bucket.s3.cloud.cmctelecom.vn/34778520/products/338644/1633853881-b-thm.jpg" />
                                         <Card.Body>
-                                            <Card.Title>Bún bò</Card.Title>
+                                            <Card.Title>Bò thêm</Card.Title>
                                             <Card.Text>
-                                                Description
+                                                30.000đ
                                             </Card.Text>
                                             <Button variant="primary"><BsPlusLg/></Button>
                                         </Card.Body>
                                     </Card>
                                     <Card style={{ width: '10rem' }} className='food-card'>
-                                        <Card.Img variant="top" src="https://s3-bucket.s3.cloud.cmctelecom.vn/34778520/products/306685/1632888139-3.jpg" />
+                                        <Card.Img variant="top" style={{  height: '9.5rem'}} src="https://s3-bucket.s3.cloud.cmctelecom.vn/34778520/products/338645/1633854000-nhau-nho-1.jpg" />
                                         <Card.Body>
-                                            <Card.Title>Bún bò</Card.Title>
+                                            <Card.Title>Móng thêm</Card.Title>
                                             <Card.Text>
-                                                Description
+                                                15.000đ
                                             </Card.Text>
                                             <Button variant="primary"><BsPlusLg/></Button>
                                         </Card.Body>
                                     </Card>
                                     <Card style={{ width: '10rem' }} className='food-card'>
-                                        <Card.Img variant="top" src="https://s3-bucket.s3.cloud.cmctelecom.vn/34778520/products/306685/1632888139-3.jpg" />
+                                        <Card.Img variant="top" style={{  height: '8.5rem'}} src="https://s3-bucket.s3.cloud.cmctelecom.vn/34778520/products/338646/1633854070-do-3.jpg" />
                                         <Card.Body>
-                                            <Card.Title>Bún bò</Card.Title>
+                                            <Card.Title>Chả cua</Card.Title>
                                             <Card.Text>
-                                                Description
+                                                10.000đ
                                             </Card.Text>
                                             <Button variant="primary"><BsPlusLg/></Button>
                                         </Card.Body>
                                     </Card>
                                     <Card style={{ width: '10rem' }} className='food-card'>
-                                        <Card.Img variant="top" src="https://s3-bucket.s3.cloud.cmctelecom.vn/34778520/products/306685/1632888139-3.jpg" />
+                                        <Card.Img variant="top" style={{  height: '8.5rem'}} src="https://s3-bucket.s3.cloud.cmctelecom.vn/34778520/products/338718/1633855141-bohuc.jpg" />
                                         <Card.Body>
-                                            <Card.Title>Bún bò</Card.Title>
+                                            <Card.Title>Bò húc</Card.Title>
                                             <Card.Text>
-                                                Description
+                                               20.000đ
                                             </Card.Text>
                                             <Button variant="primary"><BsPlusLg/></Button>
                                         </Card.Body>
                                     </Card>
                                     <Card style={{ width: '10rem' }} className='food-card'>
-                                        <Card.Img variant="top" src="https://s3-bucket.s3.cloud.cmctelecom.vn/34778520/products/306685/1632888139-3.jpg" />
+                                        <Card.Img variant="top" style={{  height: '8.5rem'}} src="https://s3-bucket.s3.cloud.cmctelecom.vn/34778520/products/338714/1633854521-coca-2.jpg" />
                                         <Card.Body>
-                                            <Card.Title>Bún bò</Card.Title>
+                                            <Card.Title>Coca Cola</Card.Title>
                                             <Card.Text>
-                                                Description
+                                                15.000đ
                                             </Card.Text>
                                             <Button variant="primary"><BsPlusLg/></Button>
                                         </Card.Body>
                                     </Card>
                                     <Card style={{ width: '10rem' }} className='food-card'>
-                                        <Card.Img variant="top" src="https://s3-bucket.s3.cloud.cmctelecom.vn/34778520/products/306685/1632888139-3.jpg" />
+                                        <Card.Img variant="top" style={{  height: '8.5rem'}} src="https://s3-bucket.s3.cloud.cmctelecom.vn/34778520/products/338715/1633854728-sting-1.jpg" />
                                         <Card.Body>
-                                            <Card.Title>Bún bò</Card.Title>
+                                            <Card.Title>Sting</Card.Title>
                                             <Card.Text>
-                                                Description
-                                            </Card.Text>
-                                            <Button variant="primary"><BsPlusLg/></Button>
-                                        </Card.Body>
-                                    </Card>
-                                    <Card style={{ width: '10rem' }} className='food-card'>
-                                        <Card.Img variant="top" src="https://s3-bucket.s3.cloud.cmctelecom.vn/34778520/products/306685/1632888139-3.jpg" />
-                                        <Card.Body>
-                                            <Card.Title>Bún bò</Card.Title>
-                                            <Card.Text>
-                                                Description
-                                            </Card.Text>
-                                            <Button variant="primary"><BsPlusLg/></Button>
-                                        </Card.Body>
-                                    </Card>
-                                    <Card style={{ width: '10rem' }} className='food-card'>
-                                        <Card.Img variant="top" src="https://s3-bucket.s3.cloud.cmctelecom.vn/34778520/products/306685/1632888139-3.jpg" />
-                                        <Card.Body>
-                                            <Card.Title>Bún bò</Card.Title>
-                                            <Card.Text>
-                                                Description
+                                                15.000đ
                                             </Card.Text>
                                             <Button variant="primary"><BsPlusLg /></Button>
                                         </Card.Body>

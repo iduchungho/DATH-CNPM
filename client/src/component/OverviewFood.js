@@ -2,13 +2,11 @@ import React, { useState } from "react";
 import { Offcanvas } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import {
-    BsXLg
-}
-    from 'react-icons/bs'
+import {BsXLg} from 'react-icons/bs'
 import './OverviewFood.css';
 
 export default function OverviewFood(foodID) {
+    
     const [showbtn, setShowbtn] = useState(false);
     const handleShow = () => setShowbtn(true);
     const handleClose = () => setShowbtn(false);
@@ -31,10 +29,10 @@ export default function OverviewFood(foodID) {
                             className="img-ovvfood"
                         />
                         <div className="food-description">
-                            <h3>Bún bò huế</h3>
-                            <div>Nước dùng ngọt thịt, <br/> ăn kèm với rau sống</div>
+                            <h3>{foodID.foodName}</h3>
+                            <div>Nước dùng ngọt thịt, <br/>ăn kèm với rau sống</div>
                         </div>
-                        <h3 className="food-price">25.000đ</h3>
+                        <h3 className="food-price">{foodID.price}</h3>
                     </div>
                     <div className="line" />
                     <Form className="input-box">

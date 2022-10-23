@@ -76,7 +76,7 @@ export default function Home() {
                                             </Card.Text>
                                             {/* <Button variant="primary"><BsPlusLg/></Button> */}
                                             <OverviewFood foodID='1' foodName="Bún bò" price="25.000đ" 
-                                            src="https://s3-bucket.s3.cloud.cmctelecom.vn/34778520/products/306685/1632888139-3.jpg" descrip="Nước dùng ngọt thịt ăn kèm với rau sống"/>
+                                            src="https://s3-bucket.s3.cloud.cmctelecom.vn/34778520/products/306685/1632888139-3.jpg" descrip="Nước dùng ngọt thịt hương vị thơm ngon"/>
                                         </Card.Body>
                                     </Card>
                                     <Card style={{width:'10rem'}} className='food-card'>

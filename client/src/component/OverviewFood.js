@@ -35,7 +35,6 @@ export default function OverviewFood(foodID) {
                         <h4 className="food-price">{foodID.price}</h4>
                     </div>
                     <div className="line" />
-                    <br></br>
                     <Form className="input-box">
                         <Form.Group className="mb-3">
                             <Form.Label><h4>Ghi chú</h4></Form.Label>

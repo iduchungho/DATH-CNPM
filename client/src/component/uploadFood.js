@@ -12,7 +12,7 @@ function FoodForm() {
     const [category, setCategory] = useState("Food")
     const [averageRating, setAverageRating] = useState(5)
     const [image, setImage] = useState({})
-
+    const [description, setDescription] = useState("")
     const [validated, setValidated] = useState(false);
     async function handleSubmit(event)
     {
@@ -29,6 +29,7 @@ function FoodForm() {
         data.append('category',category);
         data.append('averageRating',averageRating.toString());
         data.append('image',image.files[0]);
+        data.append('description',description);
         try {
             const res = await axios.post(`${serverURL}/api/uploadFoods`, data, {
                 withCredentials: true,
@@ -63,7 +64,10 @@ function FoodForm() {
                     <option value="Drink">Đồ uống</option>
                     </Form.Select>
                     </Form.Group>
-
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Label>Mô tả :</Form.Label>
+                        <Form.Control required type="text" placeholder="Enter your description" onChange={(e)=>{setDescription(e.target.value)}} />
+                    </Form.Group>
 
                     <Form.Group className="position-relative mb-3">
                         <Form.Label>Hình ảnh:</Form.Label>

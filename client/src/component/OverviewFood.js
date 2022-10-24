@@ -5,8 +5,7 @@ import Form from "react-bootstrap/Form";
 import {BsXLg} from 'react-icons/bs'
 import './OverviewFood.css';
 
-export default function OverviewFood(foodID) {
-    
+export default function OverviewFood(props) {
     const [showbtn, setShowbtn] = useState(false);
     const handleShow = () => setShowbtn(true);
     const handleClose = () => setShowbtn(false);
@@ -25,14 +24,14 @@ export default function OverviewFood(foodID) {
                     <div className="line" />
                     <div className="food-description-container">
                         <img
-                            src={foodID.src}
+                            src={props.food.foodImage.url}
                             className="img-ovvfood"
                         />
                         <div className="food-description">
-                            <h3>{foodID.foodName}</h3>
-                            <p>{foodID.descrip}</p>
+                            <h3>{props.food.title}</h3>
+                            <div>{props.food.description}</div>
                         </div>
-                        <h4 className="food-price">{foodID.price}</h4>
+                        <h3 className="food-price">{props.food.price}đ </h3>
                     </div>
                     <div className="line" />
                     <Form className="input-box">

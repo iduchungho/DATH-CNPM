@@ -30,7 +30,7 @@ export default function OffcanvasLogin() {
             <Button variant="primary" href='/login' className='button'>
                 <BsPerson className='btn-icon' />
                 <div className='btn-title'>
-                    Đăng nhập
+                    Thêm món ăn
                 </div>
             </Button>
         </>

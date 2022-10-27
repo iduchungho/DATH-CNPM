@@ -2,7 +2,7 @@ import {memo, useState} from "react"
 import clsx from "clsx"
 import axios from "axios"
 // css and bootstrap
-import styles from "./uploadFood.css"
+import styles from "./style/uploadFood.css"
 import {Button, Form, Container, InputGroup} from "react-bootstrap"
 import { serverURL } from "../config/config"
 

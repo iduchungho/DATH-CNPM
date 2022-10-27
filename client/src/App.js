@@ -8,6 +8,7 @@ import Tutorial from './component/Tutorial';
 import { LoginPage, RegisterPage } from './component/Login'
 import FoodForm from './component/uploadFood';
 import CartsInfo from './component/cartsInfo';
+import Menu from './component/Menu';
 function App() {
   return (
     <>
@@ -22,6 +23,7 @@ function App() {
           <Route path = '/uploadFood' element = {<FoodForm />}/>
           <Route path='/cartsInfo' element={<CartsInfo/>} />
           <Route path='*' element={<div>404 Not Found</div>} />
+          <Route path='/menu' element={<Menu/>} />
         </Routes>
         <NavbarBottom/>
       </Router>

@@ -4,7 +4,8 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/esm/Button';
 import { BsPlusLg } from "react-icons/bs";
 import axios from 'axios';
-import './Style.css';
+import './style/Style.css';
+import './style/Home.css';
 import { useState, useEffect } from 'react';
 import { serverURL } from '../config/config';
 import { CartComponent } from './Cart';
@@ -57,7 +58,7 @@ export default function Home() {
                         <Card variant='light'>
                             {/* style={{ width: '10rem' }} */}
                             <Card.Body>
-                                <div>Đồ ăn</div>
+                                <div href= "#hrefFood">Đồ ăn</div>
                                 <div className='line' />
                                 <div>Đồ uống</div>
                                 <div className='line' />
@@ -65,7 +66,8 @@ export default function Home() {
                         </Card>
                     </div>
                     <div className='food-card-container'>
-                        <Card variant='light' style={{ width: '45rem' }}>
+                        <Card variant='light'>
+                            {/* style={{ width: '45rem' }} */}
                             <Card.Body>
                                 <Form className="d-flex">
                                     <Form.Control
@@ -77,14 +79,14 @@ export default function Home() {
                                     <Button variant="outline-success">Search</Button>
                                 </Form>
                                 <div className='line' />
-                                <h4>Đồ ăn</h4>
+                                <h4 className='hrefFood'>Đồ ăn</h4>
                                 <div className='line' />
                                 {/*food card area*/}
                                 <div className='food-card-area'>
                                     {foods.map((food) => (
                                         <Card style={{ width: '10rem' }} className='food-card' key={food.id}>
                                             <Card.Img variant="top" style={{height : '8rem'}} src={food.foodImage.url} />
-                                            <Card.Body>
+                                            <Card.Body className='food-card-body'>
                                                 <Card.Title>{food.title}</Card.Title>
                                                 {/* <Card.Text>
                                                     {food.description}
@@ -93,7 +95,10 @@ export default function Home() {
                                                     {food.price} đồng
                                                 </Card.Text>
                                                 {/* <Button variant="primary"><BsPlusLg/></Button> */}
-                                                <OverviewFood food={food}/>
+                                                <div className='food-btn'>
+                                                    <OverviewFood food={food} />
+                                                    <Button className='food-btn-add'><BsPlusLg /></Button>
+                                                </div>
                                             </Card.Body>
                                         </Card>
                                     ))}

@@ -8,7 +8,7 @@ import Nav from 'react-bootstrap/Nav';
 
 import React from 'react';
 
-import './Style.css'
+import './style/Style.css'
 import OffcanvasCart from './Cart';
 import OffcanvasLogin from './Login';
 import { BKLogoComponent } from './Home';

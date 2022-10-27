@@ -1,5 +1,5 @@
 import React from "react";
-import './Style.css';
+import './style/Style.css';
 import Table from 'react-bootstrap/Table';
 
 export default function CartsInfo() {

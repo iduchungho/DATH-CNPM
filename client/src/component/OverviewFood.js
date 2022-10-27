@@ -3,7 +3,7 @@ import { Offcanvas } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import {BsXLg} from 'react-icons/bs'
-import './OverviewFood.css';
+import './style/OverviewFood.css';
 
 export default function OverviewFood(props) {
     const [showbtn, setShowbtn] = useState(false);

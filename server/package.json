@@ -34,6 +34,7 @@
         "multer-storage-cloudinary": "^4.0.0",
         "pino": "^8.6.1",
         "pino-pretty": "^9.1.1",
+        "prisma": "^4.5.0",
         "zod": "^3.19.1",
         "zod-express-middleware": "^1.4.0"
     },

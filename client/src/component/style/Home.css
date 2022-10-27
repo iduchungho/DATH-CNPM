@@ -1,0 +1,15 @@
+.food-btn{
+    display: flex;
+    height: 2.5rem;
+    margin-top: auto;
+}
+.food-card-body{
+    display: grid;
+}
+.food-btn-add{
+    margin-left: auto;
+    border-radius: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

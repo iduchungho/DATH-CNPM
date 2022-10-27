@@ -24,7 +24,7 @@ export default function OffcanvasCart() {
             <Button variant="light" onClick={handleShow} className='button'>
                 <BsCart2 className='btn-icon' />
                 <div className='btn-title'>
-                Xem đơn hàng
+                Xem giỏ hàng
                 </div>
             </Button>
             <Offcanvas show={showbtn} onHide={handleClose} placement="end" backdrop="static">
